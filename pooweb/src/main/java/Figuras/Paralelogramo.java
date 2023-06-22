@@ -70,21 +70,25 @@ public class Paralelogramo extends Figura{
         this.lado10 = lado10;
         this.lado11 = lado11;
     }
+    public Paralelogramo(double lado8, double lado9, double lado10, double lado11){
+        this.lado8 = lado8;
+        this.lado9 = lado9;
+        this.lado10 = lado10;
+        this.lado11 = lado11;
+    }
+    public Paralelogramo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
 
-    public double calcularArea(double base, double altura){
+    public double calcularArea(){
         double area=0;
         area=base*altura;
         return area;
     }
-    public double calcularPerimetro(double lado8, double lado9, double lado10, double lado11){
+    public double calcularPerimetro(){
         double perimetro=0;
         perimetro=lado8+lado9+lado10+lado11;
         return perimetro;
-    }
-
-    @Override
-    public double calcularArea() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularArea'");
     }
 }

@@ -20,7 +20,7 @@
         <br>
             <form action="servlet" method="POST">
                 <label>Ingrese por favor la base del triangulo:</label>
-                <br><br>
+                <br>
                 <input class="input-ancho" type="text" name="base3">
                 <br><br>
                 <label>Ingrese por favor la altura del triangulo:</label>

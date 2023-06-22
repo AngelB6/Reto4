@@ -7,7 +7,12 @@ public class Rombo extends Figura{
     // Creamos los atributos necesarios para que el metodo calcularPerimetro se ejecute de manera correcta
     private double lado12;
     // Creamos los metodos constructores
-    public Rombo() {
+    public Rombo(double diaMayor, double diaMenor) {
+        this.diaMayor = diaMayor;
+        this.diaMenor = diaMenor;
+    }
+    public Rombo(double lado12) {
+        this.lado12 = lado12;
     }
     // Metodo constructor con parametros
     public Rombo(double diaMayor, double diaMenor, double lado12) {
@@ -35,19 +40,14 @@ public class Rombo extends Figura{
         this.lado12 = lado12;
     }
     // Metodos para calcular el area y el perimetro
-    public double calcularArea(double diaMayor, double diaMenor) {
+    public double calcularArea() {
         double area=0.0;
         area=(diaMayor*diaMenor)/2;
         return area;
     }
-    public double calcularPerimetro(double lado12){
+    public double calcularPerimetro(){
         double perimetro=0;
         perimetro=lado12*4;
         return perimetro;
-    }
-    @Override
-    public double calcularArea() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularArea'");
     }
 }

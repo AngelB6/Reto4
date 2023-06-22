@@ -4,7 +4,7 @@ public class Trapecio extends Figura{
     // Metodos para calcular el area
     private double base1;
     private double base2;
-    private double altura;
+    private double altura1;
     // Metodos para calcular el perimetro
     private double lado1;
     private double lado2;
@@ -13,10 +13,21 @@ public class Trapecio extends Figura{
     // Creamos los metodos constructores
     public Trapecio(){
     };
-    public Trapecio(double base1, double base2, double altura, double lado1, double lado2, double lado3, double lado4) {
+    public Trapecio(double base1, double base2, double altura1, double lado1, double lado2, double lado3, double lado4) {
         this.base1 = base1;
         this.base2 = base2;
-        this.altura = altura;
+        this.altura1 = altura1;
+        this.lado1 = lado1;
+        this.lado2 = lado2;
+        this.lado3 = lado3;
+        this.lado4 = lado4;
+    }
+    public Trapecio(double base1, double base2, double altura1) {
+        this.base1 = base1;
+        this.base2 = base2;
+        this.altura1 = altura1;   
+    }
+    public Trapecio(double lado1, double lado2, double lado3, double lado4) {
         this.lado1 = lado1;
         this.lado2 = lado2;
         this.lado3 = lado3;
@@ -35,11 +46,11 @@ public class Trapecio extends Figura{
     public void setBase2(double base2) {
         this.base2 = base2;
     }
-    public double getAltura() {
-        return altura;
+    public double getAltura1() {
+        return altura1;
     }
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public void setAltura1(double altura1) {
+        this.altura1 = altura1;
     }
     public double getLado1() {
         return lado1;
@@ -66,19 +77,14 @@ public class Trapecio extends Figura{
         this.lado4 = lado4;
     }
     // Hacemos los metodos de calcularArea y calcularPerimetro
-    public double calcularArea(double base1,double base2, double altura) {
+    public double calcularArea() {
         Double area=0.0;
-        area=(double) ((base1+base2)/2)*altura;
+        area=(double) ((base1+base2)/2)*altura1;
         return area;
     }
-    public double calcularPerimetro(double lado1, double lado2, double lado3, double lado4){
+    public double calcularPerimetro(){
         Double perimetro=0.0;
         perimetro=lado1+lado2+lado3+lado4;
         return perimetro;
-    }
-    @Override
-    public double calcularArea() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularArea'");
     }
 }

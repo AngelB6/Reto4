@@ -11,7 +11,6 @@ import Figuras.Trapecio;
 import Figuras.Triangulo;
 
 public class Servlet extends HttpServlet{
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Entro al servlet");
@@ -72,8 +71,8 @@ public class Servlet extends HttpServlet{
             double base1=Double.parseDouble(req.getParameter("base1"));
             double base2=Double.parseDouble(req.getParameter("base2"));
             double altura1=Double.parseDouble(req.getParameter("altura1"));
-            Trapecio tra=new Trapecio();
-            req.setAttribute("area", tra.calcularArea(base1, base2, altura1));
+            Trapecio tra=new Trapecio(base1, base2, altura1);
+            req.setAttribute("area", tra.calcularArea());
             req.getRequestDispatcher("resultadoArea.jsp").forward(req, resp);
             break;
             case "perimTra":
@@ -81,30 +80,30 @@ public class Servlet extends HttpServlet{
             double lado2=Double.parseDouble(req.getParameter("lado2"));
             double lado3=Double.parseDouble(req.getParameter("lado3"));
             double lado4=Double.parseDouble(req.getParameter("lado4"));
-            Trapecio tra1=new Trapecio();
-            req.setAttribute("perimetro", tra1.calcularPerimetro(lado1, lado2, lado3, lado4));
+            Trapecio tra1=new Trapecio(lado1, lado2, lado3, lado4);
+            req.setAttribute("perimetro", tra1.calcularPerimetro());
             req.getRequestDispatcher("resultadoPerimetro.jsp").forward(req, resp);
             break;
             case "areaTria":
             double base3=Double.parseDouble(req.getParameter("base3"));
             double altura2=Double.parseDouble(req.getParameter("altura2"));
-            Triangulo tri=new Triangulo();
-            req.setAttribute("area", tri.calcularArea(base3, altura2));
+            Triangulo tri=new Triangulo(base3, altura2);
+            req.setAttribute("area", tri.calcularArea());
             req.getRequestDispatcher("resultadoArea.jsp").forward(req, resp);
             break;
             case "perimetroTria":
             double lado5=Double.parseDouble(req.getParameter("lado5"));
             double lado6=Double.parseDouble(req.getParameter("lado6"));
             double lado7=Double.parseDouble(req.getParameter("lado7"));
-            Triangulo tri1=new Triangulo();
-            req.setAttribute("perimetro", tri1.calcularPerimetro(lado5, lado6, lado7));
+            Triangulo tri1=new Triangulo(lado5, lado6, lado7);
+            req.setAttribute("perimetro", tri1.calcularPerimetro());
             req.getRequestDispatcher("resultadoPerimetro.jsp").forward(req, resp);
             break;
             case "areaPa":
             double base=Double.parseDouble(req.getParameter("base"));
             double altura=Double.parseDouble(req.getParameter("altura"));
-            Paralelogramo pa=new Paralelogramo();
-            req.setAttribute("area", pa.calcularArea(base, altura));
+            Paralelogramo pa=new Paralelogramo(base, altura);
+            req.setAttribute("area", pa.calcularArea());
             req.getRequestDispatcher("resultadoArea.jsp").forward(req, resp);
             break;
             case "perimPa":
@@ -112,21 +111,21 @@ public class Servlet extends HttpServlet{
             double lado9=Double.parseDouble(req.getParameter("lado9"));
             double lado10=Double.parseDouble(req.getParameter("lado10"));
             double lado11=Double.parseDouble(req.getParameter("lado11"));
-            Paralelogramo pa1=new Paralelogramo();
-            req.setAttribute("perimetro", pa1.calcularPerimetro(lado8, lado9, lado10, lado11));
+            Paralelogramo pa1=new Paralelogramo(lado8, lado9, lado10, lado11);
+            req.setAttribute("perimetro", pa1.calcularPerimetro());
             req.getRequestDispatcher("resultadoPerimetro.jsp").forward(req, resp);
             break;
             case "areaRom":
             double diaMayor=Double.parseDouble(req.getParameter("diaMayor"));
             double diaMenor=Double.parseDouble(req.getParameter("diaMenor"));
-            Rombo rom=new Rombo();
-            req.setAttribute("area", rom.calcularArea(diaMayor, diaMenor));
+            Rombo rom=new Rombo(diaMayor, diaMenor);
+            req.setAttribute("area", rom.calcularArea());
             req.getRequestDispatcher("resultadoArea.jsp").forward(req, resp);
             break;
             case "perimetroRom":
             double lado12=Double.parseDouble(req.getParameter("lado12"));
-            Rombo rom1=new Rombo();
-            req.setAttribute("perimetro", rom1.calcularPerimetro(lado12));
+            Rombo rom1=new Rombo(lado12);
+            req.setAttribute("perimetro", rom1.calcularPerimetro());
             req.getRequestDispatcher("resultadoPerimetro.jsp").forward(req, resp);
             break;
             default:

@@ -20,7 +20,7 @@
         <br>
             <form action="servlet" method="POST">
                 <label>Ingrese por favor el primer lado del triangulo:</label>
-                <br><br>
+                <br>
                 <input class="input-ancho" type="text" name="lado5">
                 <br><br>
                 <label>Ingrese por favor el segundo lado del triangulo:</label>
