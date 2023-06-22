@@ -1,0 +1,90 @@
+body{
+    padding: 0;
+}
+
+button{
+    background-color: white;
+    border: none;
+}
+
+.rombo{
+    height: 200px;
+    width: 100%;
+}
+
+.trapecio{
+    height: 200px;
+    max-width: 100%;
+}
+
+.triangulo{
+    background-color: white;
+    height: 200px;
+    max-width: 100%;
+}
+
+
+.paralelogramo{
+    background-color: white;
+    height: 300px;
+    max-width: 100%;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.contenedor img {
+    margin-right: 100px;
+}
+
+h1{
+    margin-top: 5%;
+    font-family: 'Tilt Prism', cursive;
+    text-align: center;
+    font-size: 50px;
+}
+
+.registro{
+    margin-left: 30%;
+    max-width: 40%;
+    max-height: 40%;
+    border-radius: 60px;
+    background-color:  #04A0D9;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    font-size: 35px;
+}
+
+.boton{
+    border: none;
+    background-color: #00749E;
+    padding: 20px 80px;
+    cursor: pointer;
+    border-radius: 50px;
+    color: white;
+}
+
+.boton:hover{
+    background-color: #184252;
+}
+
+.input-ancho{
+    width: 600px;
+    border-radius: 20px;
+    padding: 10px;
+    border-color: #00749E;
+}
+
+button {
+    background-color: #ffffff00;
+    border: none;
+}
+
+.encabezado{
+    background-color: #04A0D9;
+    border-radius: 1000px;
+    padding: 50px;
+}
